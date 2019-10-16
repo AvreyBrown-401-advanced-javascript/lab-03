@@ -1,33 +1,22 @@
-// 'use strict';
-
-// /**
-//  * Simple Server
-//  * @module index
-//  */
+'use strict';
 
 
-// const express = require('express');
+/**
+ * Simple Server
+ * @module index
+ */
 
-// const pol = require('./src/pol.js');
 
-// const app = express();
 
-// app.use('/docs', express.static('./docs'));
+const express = require('express');
+const app = express();
 
-// /**
-//  * / Request Handler (All Routes)
-//  * @param req
-//  * @param res
-//  */
 
-// app.get('/', requestHandler);
+app.get('/', (req, res) => res.send('Hello World!'));
 
-// function requestHandler(req,res) {
-//   res.setHeader('Content-Type', 'text/html');
-//   res.statusCode = 200;
-//   let isItAlive = pol.isAlive(req.query.dead).toString();
-//   res.write( isItAlive );
-//   res.end();
-// }
+app.use('/docs', express.static('./docs'));
 
-// app.listen(process.env.PORT, () => console.log('server up') );
+
+
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'));

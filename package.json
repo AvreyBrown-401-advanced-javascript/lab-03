@@ -21,6 +21,7 @@
   "homepage": "https://github.com/AvreyBrown-401-advanced-javascript/lab-03#readme",
   "dependencies": {
     "eslint": "^6.5.1",
+    "express": "^4.17.1",
     "jest": "^24.9.0"
   },
   "devDependencies": {
