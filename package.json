@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage",
+    "test": "jest --verbose",
     "lint": "eslint ./**/*.js --fix",
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
