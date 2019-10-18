@@ -3,7 +3,7 @@
 
 jest.mock('fs');
 
-const fileReader  = require('../lib/reader');
+const fileReader  = require('../lib/reader-callback');
 
 describe('testing file reader module', () => {
   it('throws an error when a bad file is given', (done) => {
@@ -16,4 +16,9 @@ describe('testing file reader module', () => {
     });
   });
 });
+
+// describe('writes to a file using a callback', () => {
+//   fileEdit.write('test.json', (test), (err, data))
+// })
+
 
