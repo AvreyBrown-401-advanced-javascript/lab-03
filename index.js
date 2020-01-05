@@ -9,8 +9,8 @@ const filePath = process.argv[2];
 
 // const express = require('express');
 const callback = require('./lib/reader-callback');
-// const promise = require('./lib/reader-promise');
-// const await = require('./lib/reader-await');
+const promise = require('./lib/reader-promise');
+const useAwait = require('./lib/reader-await');
 // const app = express();
 
 
@@ -32,12 +32,12 @@ callback.read(filePath, (err, data) => {
   }
 });
 
+async function useAwaitFunction() {
+  const content = await useAwait.read(filePath);
+  content.lastName = 'changed with await';
+  await useAwait.write(filePath, content);;
+  const newContent = await useAwait.read(filePath);
+  return newContent;
+}
 
-// app.get('/', (req, res) => res.send('Hello World!'));
-
-// app.use('/docs', express.static('./docs'));
-
-
-
-
-// app.listen(3000, () => console.log('listening on port 3000'));
+useAwaitFunction().then((fileData) => console.log(fileData));

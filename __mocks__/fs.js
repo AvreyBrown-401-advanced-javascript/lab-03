@@ -3,7 +3,7 @@
 
 let fileContents = 'Test string';
 
-module.exports = exports = {};
+// module.exports = exports = {};
 
 exports.readFile = (file, cb) => {
   if( file.match(/bad/i) ) {

@@ -22,7 +22,9 @@
   "dependencies": {
     "eslint": "^6.5.1",
     "express": "^4.17.1",
-    "jest": "^24.9.0"
+    "fs": "0.0.1-security",
+    "jest": "^24.9.0",
+    "util": "^0.12.1"
   },
   "devDependencies": {
     "jsdoc": "^3.6.3"
