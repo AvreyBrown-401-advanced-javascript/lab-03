@@ -2,11 +2,11 @@
 
 jest.mock('fs');
 
-const fileEdit = require('../lib/reader-promise');
+const fileEdit = require('../lib/reader-await');
 
 describe('tests file handler' , () => {
 
-  it ('writes to a file using a promise', () => {
+  it ('writes to a file using async-await', () => {
     fileEdit.write('test.json', {name: 'test'}, (err, data) => {
       expect(err).not.toBeDefined();
       expect(data).toBeDefined();
