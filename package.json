@@ -1,0 +1,32 @@
+{
+  "name": "lab-03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ./lib/**/*.js --fix",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvreyBrown-401-advanced-javascript/lab-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AvreyBrown-401-advanced-javascript/lab-03/issues"
+  },
+  "homepage": "https://github.com/AvreyBrown-401-advanced-javascript/lab-03#readme",
+  "dependencies": {
+    "eslint": "^6.5.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "jest": "^24.9.0",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.3"
+  }
+}
